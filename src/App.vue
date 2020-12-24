@@ -10,11 +10,19 @@
 <script>
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+// import {getCategoryList} from './api'
 
-// import Header from '@/components/Header'
 
 export default {
-  name: '',
+  name: 'App',
+
+  mounted() {
+    //  getCategoryList().then(()=>{
+    //    console.log('result',result)
+    //  })
+    this.$store.dispatch('getCategoryList')
+  },
+
   components:{
     Header,
     Footer
