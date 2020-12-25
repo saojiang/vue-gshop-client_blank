@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import App from '@/App'
-import router from '@/router'
-import TypeNav from './components/TypeNav'
+import router from './router'
 
-//创造全局组件 
-Vue.component(TypeNav.name,TypeNav)
+
+
+
 Vue.config.productionTip = false
 
 
 new Vue({
   el: '#app',
   render: h => h(App),
-  router
+  router //所有的组件都可以通过this.$router获取路由器对象
 })
